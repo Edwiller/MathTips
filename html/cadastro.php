@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>MathTips - Cadastro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Fonte -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/cadastro.css" />
+    </head>
+
+    <body>
+        <div class="container cadastro-container fade-in">
+            <header class="main-header">
+                <div class="logo">
+                    <img src="img/favicon.png" alt="logo" />
+                    <h1>MathTips</h1>
+                </div>
+
+                <!-- DARK MODE SWITCH -->
+                <div class="form-check form-switch ms-auto me-3">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="darkModeToggle"
+                    />
+                    <label class="form-check-label">🌙</label>
+                </div>
+
+                <!-- BOTÃO HAMBÚRGUER -->
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+                <!-- NAV -->
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html" class="active">Início</a>
+                    <a href="html/matematica.html">Matemática</a>
+                    <a href="html/fisica.html">Física</a>
+                    <a href="html/quimica.html">Química</a>
+
+                    <div class="dropdown">
+                        <a class="dropbtn">Conta ▾</a>
+                        <div class="dropdown-content">
+                            <a href="html/cadastro.html">Cadastro</a>
+                            <a href="html/login.html">Login</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="card cadastro-card">
+                <div class="card-body">
+                    <h2 class="text-center mb-3">Criar conta</h2>
+
+                    <form id="cadastroForm">
+                        <div class="mb-3">
+                            <label>Nome completo</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nome"
+                                placeholder="Seu nome completo"
+                                required
+                            />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="exemplo@gmail.com"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label>CPF</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="cpf"
+                                placeholder="000.000.000-00"
+                                maxlength="14"
+                                required
+                            />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Telefone</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="telefone"
+                                placeholder="(00) 90000-0000"
+                                maxlength="15"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label>Senha</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="senha"
+                                placeholder="senhaexemplo123"
+                                required
+                            />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Confirmar senha</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="confirmarSenha"
+                                placeholder="repita a senha aqui"
+                                required
+                            />
+                        </div>
+
+                        <button class="btn btn-primary w-100">Cadastrar</button>
+                    </form>
+
+                    <p class="text-center mt-3">
+                        Já tem conta? <a href="login.html">Entrar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/darkmode.js"></script>
+        <script src="../js/cadastro.js"></script>
+    </body>
+</html>
